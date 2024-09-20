@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Spread with Objects: Write a function updatePerson(person, updates) that uses the spread operator to return a new object by updating properties of the person object with values from the updates object.</h1>
+</body>
+<script>
+  let updatePerson = (person, updates) => {
+  return { ...person, ...updates };
+}
+
+// Testing the function
+let person = { name: "Alice", age: 25, profession: "Engineer" };
+let updates = { age: 26, country: "India" };
+
+let updatedPerson = updatePerson(person, updates);
+console.log(updatedPerson); // Output: { name: "Alice", age: 26, profession: "Engineer", country: "India" }
+
+</script>
+</html>

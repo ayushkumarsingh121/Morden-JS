@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Default Parameters in Complex Expression: Create a function calculateDiscount(price, discount = price * 0.1) that
+    calculates and returns the final price after applying a discount. Test it with different values.</h1>
+</body>
+<script>
+  let calculateDiscount = (price, discount = price * 0.1) => {
+    return price - discount;
+  }
+
+  console.log(calculateDiscount(100))
+  console.log(calculateDiscount(100, 20))
+  console.log(calculateDiscount(200))
+  console.log(calculateDiscount(200, 50))
+
+</script>
+
+</html>

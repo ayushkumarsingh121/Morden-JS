@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Rest Parameter: Write a function sum(...numbers) that takes any number of arguments using the rest parameter and returns their sum.</h1>
+</body>
+<script>
+  let sum = (...numbers) => {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+// Testing the function
+console.log(sum(1, 2, 3, 4)); // Output: 10
+console.log(sum(5, 10, 15)); // Output: 30
+console.log(sum(7, 14, 21, 28)); // Output: 70
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Arrow Function and this Context: Write a function Person(name) that has an arrow function to print the person's
+    name using this.name. Compare it with a regular function and explain the difference in this binding.</h1>
+</body>
+<script>
+  // Using Arrow Function
+
+  function Person(name) {
+    this.name = name;
+    this.printName = () => {
+      console.log(this.name);
+    }
+  }
+
+  let person1 = new Person("Alice");
+  person1.printName(); // Output: Alice
+
+// Using a Regular Function
+
+function Person(name) {
+  this.name = name;
+  this.printName = function() {
+    console.log(this.name);
+  }
+}
+
+let person2 = new Person("Bob");
+person2.printName(); // Output: Bob
+
+</script>
+
+</html>

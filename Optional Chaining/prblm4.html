@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Optional Chaining with Nested Objects: Write a function getNestedProperty(obj) that uses optional chaining to safely retrieve a deeply nested property like obj.a.b.c.d.</h1>
+</body>
+<script>
+  function getNestedProperty(obj) {
+    return obj?.a?.b?.c?.d;
+}
+
+// Example usage:
+const nestedObj1 = { a: { b: { c: { d: "value" } } } };
+const nestedObj2 = { a: { b: { c: {} } } };
+const nestedObj3 = {};
+
+console.log(getNestedProperty(nestedObj1)); // "value"
+console.log(getNestedProperty(nestedObj2)); // undefined
+console.log(getNestedProperty(nestedObj3)); // undefined
+
+</script>
+</html>

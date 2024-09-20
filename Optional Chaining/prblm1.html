@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Basic Optional Chaining: Write a function getUserCity(user) that uses optional chaining to safely access the city property of the address object within a user object. Return undefined if the address or city is missing.</h1>
+</body>
+<script>
+  function getUserCity(user) {
+    return user?.address?.city;
+}
+
+// Example usage:
+const user1 = { name: "Bob", address: { city: "Springfield" } };
+const user2 = { name: "Alice" };
+
+console.log(getUserCity(user1)); // "Springfield"
+console.log(getUserCity(user2)); // undefined
+
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Nested Destructuring: Create a function extractNestedData(obj) that uses nested object destructuring to extract values from a nested object like { name: { first: "John", last: "Doe" }, age: 30 }.</h1>
+</body>
+<script>
+  function extractNestedData(obj) {
+    const { name: { first, last }, age } = obj;
+    return { first, last, age };
+}
+
+// Example usage:
+const person = { name: { first: "John", last: "Doe" }, age: 30 };
+const extractedData = extractNestedData(person);
+console.log(extractedData); // { first: "John", last: "Doe", age: 30 }
+
+</script>
+</html>

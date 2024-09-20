@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Optional Chaining with Function Calls: Write a function callOptionalMethod(obj) that uses optional chaining to call a method greet() on obj, returning undefined if greet doesn’t exist.</h1>
+</body>
+<script>
+  function callOptionalMethod(obj) {
+    return obj?.greet?.();
+}
+
+// Example usage:
+const user1 = {
+    name: "Alice",
+    greet() {
+        return "Hello!";
+    }
+};
+
+const user2 = {
+    name: "Bob"
+};
+
+console.log(callOptionalMethod(user1)); // "Hello!"
+console.log(callOptionalMethod(user2)); // undefined
+
+</script>
+</html>

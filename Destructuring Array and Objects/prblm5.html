@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Rest in Destructuring: Write a function getUserInfo(user) that destructures the user object, extracting name and placing the remaining properties into a rest variable.</h1>
+</body>
+<script>
+  function getUserInfo(user) {
+    const { name, ...rest } = user;
+    return { name, rest };
+}
+
+// Example usage:
+const user = { name: "Alice", age: 25, email: "alice@example.com", city: "Wonderland" };
+const userInfo = getUserInfo(user);
+console.log(userInfo); 
+// { name: "Alice", rest: { age: 25, email: "alice@example.com", city: "Wonderland" } }
+</script>
+</html>

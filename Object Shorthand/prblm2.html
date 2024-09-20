@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Method Shorthand: Modify the createPerson function to include a method introduce() that logs a string introducing the person (e.g., "Hi, I'm John and I'm 30 years old."), using the method shorthand.</h1>
+</body>
+<script>
+  let createPerson = (name, age) => {
+  return {
+    name,
+    age,
+    introduce() {
+      console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+    }
+  };
+}
+
+let person = createPerson("John", 30);
+person.introduce(); // Output: Hi, I'm John and I'm 30 years old.
+
+</script>
+</html>

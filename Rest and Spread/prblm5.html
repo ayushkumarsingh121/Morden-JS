@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Spread in Function Calls: Write a function calculateTotal(...args) that accepts a variable number of arguments and calls a separate sum function using the spread operator to pass the arguments.</h1>
+</body>
+<script>
+  let sum = (...numbers) => {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+let calculateTotal = (...args) => {
+  return sum(...args);
+}
+
+// Testing the function
+console.log(calculateTotal(1, 2, 3, 4)); // Output: 10
+console.log(calculateTotal(5, 10, 15)); // Output: 30
+console.log(calculateTotal(7, 14, 21, 28)); // Output: 70
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Block Scope and Loop: Create a function loopWithVarAndLet() that uses var in a for loop and logs the index after the loop finishes. Do the same with let and explain the difference.</h1>
+</body>
+<script>
+  function loopWithVarAndLet() {
+  // Using var
+  for (var i = 0; i < 3; i++) {
+    console.log(`Inside loop with var: ${i}`);
+  }
+  console.log(`Outside loop with var: ${i}`); // Output: 3 (var leaks out of the block scope)
+
+  // Using let
+  for (let j = 0; j < 3; j++) {
+    console.log(`Inside loop with let: ${j}`);
+  }
+  try {
+    console.log(`Outside loop with let: ${j}`); // Throws ReferenceError (let does not leak out of the block scope)
+  } catch (error) {
+    console.log(error.message); // Output: j is not defined
+  }
+}
+
+loopWithVarAndLet();
+
+</script>
+</html>

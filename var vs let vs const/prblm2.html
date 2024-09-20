@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Constant Variables: Write a function createConstantArray() that declares a constant array using const, adds elements to the array, and tries to reassign it. Explain what happens and why.</h1>
+</body>
+<script>
+  function createConstantArray() {
+  const arr = [1, 2, 3];
+  arr.push(4); // Adding an element to the array
+  console.log(arr); // Output: [1, 2, 3, 4]
+
+  try {
+    arr = [5, 6, 7]; // Trying to reassign the array
+  } catch (error) {
+    console.log(error.message); // Output: Assignment to constant variable.
+  }
+}
+
+createConstantArray();
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Optional Chaining with Arrays: Write a function getFirstFriend(user) that uses optional chaining to safely access the first friend in the friends array of a user object. Return undefined if the friends array is missing or empty.</h1>
+</body>
+<script>
+  function getFirstFriend(user) {
+    return user?.friends?.[0];
+}
+
+// Example usage:
+const user1 = { name: "Charlie", friends: ["Alice", "Bob"] };
+const user2 = { name: "Dave" };
+const user3 = { name: "Eve", friends: [] };
+
+console.log(getFirstFriend(user1)); // "Alice"
+console.log(getFirstFriend(user2)); // undefined
+console.log(getFirstFriend(user3)); // undefined
+
+</script>
+</html>

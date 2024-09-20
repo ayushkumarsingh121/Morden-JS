@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Scope Comparison: Write two functions testVar() and testLet() that declare a variable inside a block using var and let, and log the result. Show how var leaks out of the block scope, while let does not.</h1>
+</body>
+<script>
+  function testVar() {
+  if (true) {
+    var x = 10;
+  }
+  console.log(x); // Output: 10 (var leaks out of the block scope)
+}
+
+function testLet() {
+  if (true) {
+    let y = 10;
+  }
+  console.log(y); // Output: ReferenceError: y is not defined (let does not leak out of the block scope)
+}
+
+testVar();
+testLet();
+
+</script>
+</html>

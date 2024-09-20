@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Nested Template Literals: Create a function formatMessage(name, status) that uses nested template literals to return a string based on different conditions (e.g., "Welcome back, John! Your status is: active." if status is true).</h1>
+</body>
+<script>
+  let formatMessage = (name, status) => {
+    if(status){
+      console.log(`Welcome back, ${name}! Your status is: ${status}.`)
+    } 
+  }
+  formatMessage("ayush", true)
+  formatMessage("raj", false)
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Default Parameters with Undefined Values: Write a function describePerson(name, age = 25) that returns a description of a person. If age is passed as undefined, the function should use the default value.</h1>
+</body>
+<script>
+  let describePerson = (name, age = 25) => {
+  return `Name: ${name}, Age: ${age}`;
+}
+
+console.log(describePerson("Alice"))
+console.log(describePerson("Bob", 30))
+console.log(describePerson("Charlie", undefined))
+
+</script>
+</html>

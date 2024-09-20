@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Temporal Dead Zone: Write a function demonstrateTDZ() that tries to log a let variable before it’s declared. Compare this with using var.</h1>
+</body>
+<script>
+function demonstrateTDZ() {
+  console.log(x); // Output: undefined (var is hoisted and initialized with undefined)
+  var x = 10;
+
+  try {
+    console.log(y); // Throws ReferenceError (let is in the Temporal Dead Zone)
+  } catch (error) {
+    console.log(error.message); // Output: Cannot access 'y' before initialization
+  }
+  let y = 20;
+}
+
+demonstrateTDZ();
+
+</script>
+</html>
